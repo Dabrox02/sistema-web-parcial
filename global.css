@@ -4,8 +4,39 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+hr.h-color {
+	border: none;
+	border-top: 2px solid rgb(255, 255, 255);
+	height: 0;
+}
+
+#side_nav {
+	background-color: #0c0e1d;
+	min-width: 250px;
+	max-width: 250px;
+}
+
+.content {
+	min-height: 100vh;
+	width: 100%;
+}
+
 .bg {
 	background-image: url("assets/img/wallpaper-login.png");
 	background-position: center center;
 	background-size: cover;
+}
+
+.sidebar a.active {
+	background-color: #eee;
+	border-radius: 8px;
+}
+
+.sidebar a.active,
+.sidebar a.active:hover {
+	color: #000;
+}
+
+.sidebar a {
+	color: #fff;
 }
