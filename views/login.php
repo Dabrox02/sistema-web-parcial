@@ -9,7 +9,7 @@ include("./partials/header.php");
 		</div>
 		<div class="col p-4 mx-2">
 			<h2 class="fw-medium text-end pt-5 mb-5">Bienvenido, Inicia Sesion!</h2>
-			<form action="">
+			<form action="" method="POST">
 				<div class="mb-4">
 					<label for="username" class="form-label">Usuario</label>
 					<input type="text" class="form-control" id="username" aria-describedby="userHelp" name="username">
