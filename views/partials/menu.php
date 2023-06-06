@@ -18,6 +18,6 @@
 	<hr class="h-color mx-2">
 	<ul class="list-unstyled px-2">
 		<a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle mx-2"></i></i>Usuario</a>
-		<a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-x-circle mx-2"></i></i>Salir</a>
+		<a href="./../controllers/logout.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-x-circle mx-2"></i></i>Salir</a>
 	</ul>
 </div>

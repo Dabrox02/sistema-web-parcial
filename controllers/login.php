@@ -1,12 +1,16 @@
 <?php
 
-include '../config/Conexion.php';
-$pdo = new Conexion();
+require '../models/Auth.php';
 
-// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-// 	$sql = $pdo->prepare("SELECT * FROM usuarios");
-// 	$sql->execute();
-// 	$sql->setFetchMode(PDO::FETCH_ASSOC);
-// 	header('HTTP/1.1 200 OK');
-// 	echo json_encode($sql->fetchAll());
-// }
+session_start();
+$usuario = strtolower($_POST['username']);
+$pass = $_POST['password'];
+$Auth = new Auth();
+
+if ($Auth->logear($usuario, $pass)) {
+	header('location:../views/inicio.php');
+} else {
+	$dataMsg = array('sucess' => 'false', 'info' => 'Usuario o clave incorrecta.');
+	$_SESSION['msg'] = $dataMsg;
+	header('location:../views/login.php');
+}

@@ -1,5 +1,4 @@
 
-
 DELIMITER //
 CREATE TRIGGER check_id_user_before_insert
 BEFORE INSERT

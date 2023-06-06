@@ -1,5 +1,6 @@
 <?php
 $pageTitle = "Dashboard";
+require_once("./../controllers/validarAcceso.php");
 include("./partials/header-full.php");
 ?>
 
