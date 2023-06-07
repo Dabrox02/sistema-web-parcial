@@ -8,3 +8,5 @@ ls.setItem("active-link", d.title);
 d.addEventListener("DOMContentLoaded", (e) => {
   validarLinkActivo();
 });
+
+let table = new DataTable("#myTable");

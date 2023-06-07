@@ -1,5 +1,5 @@
 <?php
-require '../config/Conexion.php';
+require 'Conexion.php';
 
 class Auth extends Conexion
 {

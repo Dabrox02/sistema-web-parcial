@@ -5,7 +5,6 @@ export default function validarLinkActivo() {
   let active = ls.getItem("active-link");
   let links = d.querySelectorAll("[data-link]");
   links.forEach((e) => {
-    console.log(e);
     if (e.dataset.link === active) {
       e.classList.add("active");
     } else {

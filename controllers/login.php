@@ -1,8 +1,7 @@
 <?php
-
+session_start();
 require '../models/Auth.php';
 
-session_start();
 $usuario = strtolower($_POST['username']);
 $pass = $_POST['password'];
 $Auth = new Auth();
