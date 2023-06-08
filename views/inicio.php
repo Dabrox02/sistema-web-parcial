@@ -14,8 +14,6 @@ include("./partials/header-full.php");
 		</span>
 	</h2>
 </div>
-<!-- container-fluid -->
-</div>
 
 <?php
 include("./partials/footer.php");
