@@ -40,3 +40,7 @@ hr.h-color {
 .sidebar a {
 	color: #fff;
 }
+
+.contenedor-grafica {
+	width: 50%;
+}

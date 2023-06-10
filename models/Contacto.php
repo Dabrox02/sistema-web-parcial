@@ -3,7 +3,6 @@ require 'Conexion.php';
 
 class Contacto extends Conexion
 {
-
 	public function mostrarContactos($idUsuario)
 	{
 		$contactos = array();
@@ -64,5 +63,32 @@ class Contacto extends Conexion
 		$query->bindParam(2, $idUsuario, PDO::PARAM_INT);
 
 		return $query->execute();
+	}
+
+	public function obtenerEstadisticas($idUsuario)
+	{
+		$contactos = array();
+		$conexion = new Conexion();
+		$sql = "SELECT 
+						CASE 
+								WHEN email_contacto LIKE '%@gmail%' THEN '@gmail'
+								WHEN email_contacto LIKE '%@hotmail%' THEN '@hotmail'
+								WHEN email_contacto LIKE '%@yahoo%' THEN '@yahoo'
+								ELSE 'Otros'
+						END AS dominio,
+							COUNT(*) AS cantidad
+						FROM 
+							contacto
+						WHERE
+							id_user = ?
+						GROUP BY dominio";
+		$query = $conexion->prepare($sql);
+		$query->bindParam(1, $idUsuario, PDO::PARAM_STR);
+		$query->execute();
+
+		while ($res = $query->fetch(PDO::FETCH_ASSOC)) {
+			$contactos[] = $res;
+		}
+		return $contactos;
 	}
 }

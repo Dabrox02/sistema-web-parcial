@@ -13,6 +13,9 @@ include("./partials/header-full.php");
 			?>
 		</span>
 	</h2>
+	<?php
+	include("./partials/graphic.php");
+	?>
 </div>
 
 <?php
